@@ -25,7 +25,7 @@ const typeDefs = `
 
 const resolvers = {
 	Query: {
-		hello: (root, { name }, ctx, ) => {
+		hello: (root, { name }, ctx, info) => {
 			if (!name)
 				name = defaultName;
 			return `Hello World from ${name}!`;
